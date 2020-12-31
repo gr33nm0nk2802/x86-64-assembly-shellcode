@@ -7,13 +7,13 @@ Author: d4rk-c1ph3r
 I have taken SLAE32 as a reference for various topics.
 
 Topics:
-    - Computer Architecture Basics
-    - IA-32/64 Family
-    - Compilers, Assemblers and Linkers
-    - CPU Modes and Memory Addressing
-    - Tools of the trade
+    * Computer Architecture Basics
+    * IA-32/64 Family
+    * Compilers, Assemblers and Linkers
+    * CPU Modes and Memory Addressing
+    * Tools of the trade
         Nasm, Ld, Objdump, Ndisasm etc.
-    - IA-32 Assembly Language
+    * IA-32 Assembly Language
        * Registers and Flags
        * Program Structure for use with nasm
        * Data Types
@@ -28,7 +28,7 @@ Topics:
        * Calling standard library functions
        * FPU instructions
        * MMX, SSE, SSE2 etc. instruction sets
-    - Shellcoding on Linux
+    * Shellcoding on Linux
        * Execution environment
        * Exit and Execve shellcode
        * Bind Shell and Reverse TCP
@@ -38,14 +38,14 @@ Topics:
        * Simulating shellcode
            * locating syscalls
            * graphing shellcode execution
-    - Encoders, Decoders and Crypters on Linux
+    * Encoders, Decoders and Crypters on Linux
        * Purpose of encoding and crypting
        * XOR encoders
        * Custom encoding
            * Random sequencing and scrambling
            * mapping functions
        * Crypters
-    - Polymorphism
+    * Polymorphism
        * Why polymorphism?
        * Polymorphic engines
        * Techniques and Tools
