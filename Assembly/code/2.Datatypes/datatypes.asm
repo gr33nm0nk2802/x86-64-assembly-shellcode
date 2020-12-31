@@ -2,6 +2,9 @@
 ; A program to use the various data types in assembly and
 ; to be used with gdb to debug for the various data types
 
+; compile:  nasm -f elf32 datatypes.asm -o datatypes.o
+; linking:  ld -m elf_i386 datatypes.o -o datatypes
+
 	section .data
 var1: 	db  0xaa					; define raw bytes 
 var2: 	db  0xbb, 0xcc, 0xdd
