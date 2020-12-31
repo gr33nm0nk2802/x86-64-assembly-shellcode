@@ -1,6 +1,6 @@
 ; Author: d4rk-c1ph3r
 ; A program to demonstrate the Working of a stack
-; The function prolouge and function epilouge
+; The function prolouge and function epilouge also the use of  procedures
 
 ; Assembling: nasm -f elf32 -o stack.o stack.asm
 ; linking:    ld -m elf_i386 -o stack stack.o
