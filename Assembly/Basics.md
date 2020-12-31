@@ -34,9 +34,9 @@ CPU(brain), I/O devices and Memory communicates using System Buses.
 
 ```
 
-									      `Registers`
+                                           `Registers`
 `Control Unit` <->  `Execution Unit`  <->
-							   		        `Flags`
+                                           `Flags`
 
 ```
 
@@ -122,7 +122,7 @@ Memory layout for the program can be accessed inside `/proc/[pid]/maps` this giv
 ```
 558e67b58000-558e67b85000          r--p      00000000            08:08        3940580  /usr/bin/bash
 (Start-End address of section) (permission)  (offset for the)   (Major/Minor) (Inode)  (File path)
-								 rwxp/s      (memory map file)  (of device)
+                                 rwxp/s      (memory map file)  (of device)
 ```
 Certain sections are anonymous and used by the mmap
 
@@ -244,6 +244,7 @@ GDB  Commands:
 `display /x $ax`
 `display /x $ah`
 `display /x $al`
+`display /1bx &label`
 
 `disassemble $eip`
 
@@ -386,9 +387,9 @@ Instruction Set:
 
 ```
 
-fd input  0
-fd output 1
-fd error  2
+	fd input  0
+	fd output 1
+	fd error  2
 
 ```
 
@@ -397,19 +398,21 @@ fd error  2
 
 **Simple Exit**
 ```
-mov eax, 0x1
-mov ebx, 0x0
-int 0x80
+
+	mov eax, 0x1
+	mov ebx, 0x0
+	int 0x80
+
 ```
 
 **Write**
 ```
 
-mov eax, 0x4
-mov ebx, 0x1
-mov ecx, message
-mov edx, mlen
-int 0x80
+	mov eax, 0x4
+	mov ebx, 0x1
+	mov ecx, message
+	mov edx, mlen
+	int 0x80
 
 ```
 
@@ -419,15 +422,23 @@ int 0x80
 
 ```
 
-operation arg1
-operation arg1, arg2
+	lable: dx [data]
+
+where dx is db, dw, dd, dq, dt etc.
 
 ```
 
 ```
 
-mov eax, ebp-0x8          # moves the address
-mov eax, [ebp-0x8]        # moves the value
+	operation arg1
+	operation arg1, arg2
+
+```
+
+```
+
+	mov eax, ebp-0x8          # moves the address from ebp-0x8 to eax
+	mov eax, [ebp-0x8]        # moves the value
 
 ```
 
