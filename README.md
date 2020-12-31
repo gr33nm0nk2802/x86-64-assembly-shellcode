@@ -2,11 +2,12 @@
 
 This Repository contains notes and code of my learning 32-bit assembly and shellcoding.
 
-Author: d4rk-c1ph3r
+Author: [d4rk-c1ph3r](https://github.com/d4rk-c1ph3r)
 
 I have taken SLAE32 as a reference for various topics.
 
-Topics:
+## Topics:
+----------
  * Computer Architecture Basics
  * IA-32/64 Family
  * Compilers, Assemblers and Linkers
