@@ -15,9 +15,9 @@ _start:
 	push 0x0a72656b
 	push 0x63614820
 	push 0x6f6c6c65
-	push byte 0x48	
-	
-	mov ecx, esp	
+	push byte 0x48
+
+	mov ecx, esp
 
 	mov dl, 17
 	int 0x80
@@ -28,4 +28,3 @@ _start:
 	xor ebx, ebx
 	mov bl, 0x13
 	int 0x80
-
