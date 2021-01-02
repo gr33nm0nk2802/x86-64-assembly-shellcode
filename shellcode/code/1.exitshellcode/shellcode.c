@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<string.h>
 
-const char code[] ="\x31\xc0\xb0\x01\x31\xdb\xb3\x05\xcd\x80";
+unsigned char code[] ="\x31\xc0\xb0\x01\x31\xdb\xb3\x05\xcd\x80";
 
 void main()
 {
@@ -11,3 +11,4 @@ void main()
 	int (*ret)() = (int(*)())code;
 	ret();
 }
+
