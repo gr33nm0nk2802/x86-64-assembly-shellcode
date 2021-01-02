@@ -1,0 +1,14 @@
+// To compile use gcc -fno-stack-protector -z executable shellcode.c -o shellcode
+#include<stdio.h>
+#include<string.h>
+
+unsigned char code[] = \
+"\xeb\x19\x31\xc0\xb0\x04\x31\xdb\xb3\x01\x59\x31\xd2\xb2\x15\xcd\x80\x31\xc0\xb0\x01\x31\xdb\xb3\x13\xcd\x80\xe8\xe2\xff\xff\xff\x48\x65\x6c\x6c\x6f\x20\x48\x61\x63\x6b\x65\x72\x73\x21\x0a";
+
+
+main()
+{
+	printf("Shellcode length: %d\n", strlen(code));
+	int (*ret)() = (int(*)())code;
+	ret();
+}
