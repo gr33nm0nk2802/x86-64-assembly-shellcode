@@ -526,6 +526,7 @@ LOOPE
 LOOPNE
 POP ECX
 
+Loop instruction depends on the counter register.
 ```
 
 ```
@@ -542,7 +543,8 @@ till ecx becomes 0
 
 PUSHAD/POPAD
 PUSHFD/POPFD
-
+function prolouge and epilouge
+leave/ret
 ```
 
 ```
