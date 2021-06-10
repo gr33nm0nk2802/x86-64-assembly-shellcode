@@ -244,6 +244,8 @@ GDB  Commands:
 
 `info registers`
 `info all-registers`
+`info functions`
+`info variables`
 
 `display /x $eax`
 `display /x $ax`
