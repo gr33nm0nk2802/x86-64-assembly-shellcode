@@ -33,6 +33,11 @@ CPU(brain), I/O devices and Memory communicates using System Buses.
 ### CPU:
 
 ```
+lscpu
+cat /proc/cpuinfo
+```
+
+```
 
                                            `Registers`
 `Control Unit` <->  `Execution Unit`  <->
@@ -248,7 +253,7 @@ GDB  Commands:
 
 `disassemble $eip`
 
-`set disassembly-flavor intel`
+`set disassembly-flavor intel`   # default syntax on linux is att
 
 `define hook-stop`
 `nexti`
@@ -256,6 +261,12 @@ GDB  Commands:
 `break [address]`
 `del [breakpoint]`
 
+To view memory mappings
+`cat /proc/pid/maps`
+`pmap -d pid`
+Inside GDB
+`info proc mappings`
+`shell readelf -h [binary] `  To get info about the headers.
 
 ```
 Registers (64-bit):
@@ -381,7 +392,7 @@ Instruction Set:
 - MMX/SSE/SSE2/SSE3/SSE4 Instructions
 - Other Instruction set Instructions
 
-`/usr/include/i386-kubyx-gnu/asm/unistd32.h`
+`/usr/include/i386-linux-gnu/asm/unistd32.h`
 `/usr/include/x86_64-linux-gnu/asm/` directory has the syscalls inside the `unistdXXX.h` file
 
 
@@ -426,6 +437,14 @@ Instruction Set:
 
 where dx is db, dw, dd, dq, dt etc.
 
+byte - 8bits(1 byte)
+word - 16bits(2 bytes)
+double word - 32bits (4 bytes)
+quad word   - 64 bits (8bytes)
+double quad word - 128bits
+
+unsigned - no sign bit.
+signed   - 1 bit for the sign.
 ```
 
 ```
