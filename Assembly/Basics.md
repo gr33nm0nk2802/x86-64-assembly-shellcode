@@ -593,6 +593,14 @@ ret adrr     it follows the leave instruction, it pops the return instruction fr
 
 ```
 
+## Calling Libc functions from assembly
+
+1. Define all libc functions with `extern` keyword
+2. All arguments to the function are on the stack in the reverse order.
+	Ex - func(a,b,c,d)
+	push d, push c, push b, push a;
+3. Adjust the esp after esp function call.
+4. Compile with gcc and use `main` entrypoint insted of `_start`
 
 # Reversing the Assembly
 
